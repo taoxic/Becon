@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <title>Forex Becon</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/h.ico" media="screen" />
+
+  <link rel="stylesheet" href="lytebox.css" type="text/css" media="screen" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <meta name="description" content="A unique forex robot that has proven success with real money trading." />
+  <meta name="keywords" content="forex robot, forex trading robot, automatic forex trading, forex robots, automated forex systems" />
+  <style type="text/css">
+    < !-- body {
+      background-color: #F2F2F2;
+    }
+
+    .style1 {
+      text-align: center;
+    }
+
+    .style2 {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .style3 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .style4 {
+      background-color: #FFFF00;
+    }
+
+    .style5 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: medium;
+    }
+
+    .style7 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: x-large;
+      color: #840000;
+    }
+
+    .style8 {
+      text-align: left;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: large;
+    }
+
+    .style9 {
+      color: #840000;
+    }
+
+    .style10 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: large;
+    }
+
+    .style11 {
+      text-align: left;
+    }
+
+    .style12 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: x-large;
+      text-align: center;
+    }
+
+    .style13 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: x-large;
+      color: #840000;
+    }
+
+    .style14 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: xx-small;
+    }
+
+    .style15 {
+      border-width: 0px;
+    }
+
+    .style16 {
+      text-align: center;
+      font-size: x-large;
+    }
+
+    .style17 {
+      text-align: right;
+    }
+
+    .style18 {
+      font-size: x-small;
+    }
+
+    .style19 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: small;
+    }
+
+    -->#d1 {
+      background: rgb(0, 0, 0);
+
+      opacity: 0.8;
+      position: fixed;
+      overflow: hidden;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+    }
+
+    #d2 {
+      position: absolute;
+      height: 200px;
+      width: 500px;
+      margin: 0px auto;
+
+      z-index: 30;
+    }
+  </style>
+  <style>
+    .imgview {
+            width: 350px;
+            height: 280px;
+            margin: 28px auto;
+            border: none;
+            overflow: hidden;
+        }
+        .imgview img {
+            width: 350px;
+            height: 280px;
+        }
+        .imgview-nav {
+            width: 255px;
+            margin: 10px auto;
+            border: none;
+            list-style-type: none;
+        }
+        .imgview-nav li {
+            float: left;
+            width: 15px;
+            height: 15px;
+            border:  none;
+            margin: 10px;
+        }
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #CFC;
+            border-radius: 50%;
+        }
+		@font-face {
+   			font-family: 'Museo300';
+   			src: url('word/Museo300-Regular.otf');
+		}
+		p,li{
+			display: block;
+			font-size:16px;
+			font-style: normal;
+			font-weight: normal;
+			color: rgb(68, 75, 81);
+			line-height:20px;
+			letter-spacing:0.5px;
+			font-family:Museo300;
+			-webkit-margin-before: 1e;
+			-webkit-margin-after: 1em;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+		}
+
+		.wordc{
+			color:#000;
+
+
+			}
+		.rightfu{
+			width:176px;
+			height:auto;
+		}
+		.topfu{ top:0px;
+		right:10px;
+		position:relative;
+		}
+		body{
+			font-family:Verdana, Geneva, sans-serif;
+		    font-size:14px;
+
+			}
+		.white_content {
+ 			display: none;
+ 			position: absolute;
+ 			top: 25%;
+ 			left: 33%;
+ 			width: 50%;
+			border: 12px solid #D6E9F1;
+ 			z-index:1002;
+			background-color:#F00;
+		}
+</style>
+  <script>
+    function show(tag){
+ var light=document.getElementById(tag);
+ var fade=document.getElementById('fade');
+ light.style.display='block';
+ fade.style.display='block';
+ }
+function hide(tag){
+ var light=document.getElementById(tag);
+ var fade=document.getElementById('fade');
+ document.getElementById("usernames").value="";
+ document.getElementById("passw").value ="";
+ document.getElementById("login_error").innerHTML = "";
+ light.style.display='none';
+ fade.style.display='none';
+}
+function Login(){
+			var email = form0.key.value;
+			var pa = form0.pass.value;
+　　　　　　	var pattern = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+\.([a-zA-Z0-9_-])+$/;
+　　　　　　	flag = pattern.test(email);
+			if(email==""){
+				document.getElementById("login_error").innerHTML = "please input username!!";
+				}
+　　　　　　	else if(!flag){
+				document.getElementById("login_error").innerHTML = "please input correct username!!";
+　　　　　　	}
+　　　　　	else if(pa==""){
+　　　　　　　　	document.getElementById("login_error").innerHTML = "please input password!!";
+　　　　　　　} else{
+				document.getElementById("login_error").innerHTML = "username does not exist!!";
+			}
+}
+</script>
+
+
+
+</head>
+
+<body>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td background="images/headertop.jpg">
+        <table background="images/header6.jpg" width="886" height="216" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr height="30%">
+            <td width="85%"></td>
+            <td>
+              <div class="topfu"><a style="border:0px;" id="btnLogin" href="javascript:;" onclick="show('light')"><img border="none" src="images/login.png" /></a></div>
+            </td>
+          </tr>
+          <tr>
+
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td background="images/bgall.jpg">
+        <div class="rightfu" style="left:0px; position:fixed; top:460px;">
+          <a href="index.htm"><img border="none" src="images/home.jpg"></a>
+        </div>
+        <div class="rightfu" style="left:0px; position:fixed; top:520px;">
+          <a href="about.htm"><img border="none" src="images/about.jpg"></a>
+        </div>
+        <div class="rightfu" style="left:0px; position:fixed; top:580px;">
+          <a href="connect.htm"><img border="none" src="images/connect.jpg"></a>
+        </div>
+        <table width="887" border="0" align="center" cellpadding="0" cellspacing="0" background="images/bg.jpg">
+          <tr>
+            <td>
+              <table width="885" border="0">
+                <tr>
+                  <td width="66"></td>
+                  <td width="737">
+
+                    <div id="light" class="white_content">
+
+
+
+                      <div id="d1"></div>
+                      <div id="d2">
+                        <div class="close" style=" width:481px; display:block ; font-weight:bold" align="right"><a href="javascript:void(0)" onclick="hide('light')">
+                            <font color="#FFFFFF">CLOSE</font>
+                          </a></div>
+                        <div class="con">
+
+                          <form name="form0">
+                            <table class="t1" width="481" height="370" border="0" style="background-color:#FFF">
+                              <tr height="80px" style="background-color:#369">
+                                <td colspan="3" align="center" style="font-weight:bold">
+                                  <font size="+5" face="Verdana, Geneva, sans-serif" color="#FFFFFF">Forex Becon</font>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="50">&nbsp;</td>
+                                <td colspan="2">
+                                  <div style=" font-size:-1px; display:block; color:#F00;">
+                                    <p id="login_error"></p>
+                                  </div>
+                                </td>
+                  </td>
+                </tr>
+                <tr align="left">
+                  <td width="75">&nbsp;</td>
+                  <td>
+                    <label>Username:</label>
+                  </td>
+                  <td><input id="usernames" name="key" type="text" style="border:1;color:#000;background-color:transparent;" /></td>
+                </tr>
+                <tr>
+                  <td width="75">&nbsp;</td>
+                  <td>
+                    <label>Password:</label>
+                  </td>
+                  <td><input id="passw" name="pass" type="password" style="border:1;color:#000;background-color:transparent;" /></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td align="left"><input type="button" onclick="Login()" value="Login" style=" font-weight:bold; color:#FFF;font-size:20px;background:#369; width:100px; height:50px" /> </td>
+
+                </tr>
+                <tr>
+                  <td height="21">&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+              </form>
+              </div>
+
+              </div>
+
+              </div>
+
+
+              <p><img src="images/offer.jpg" /></p>
+              <p>
+                <font size="+4">D</font>
+                <font style="font-weight:bold">ear Fellow Investor ,</font>
+              </p>
+              <p>Forex Becon is a professional website that helps thousands of investors just like you. Meet a few to learn why they switched brokers and chose Becon. Or compare the details to find the best online broker for you.</p>
+              <p>Now Investors can take just two easy steps to transfer your brokerage account:</p>
+              <p>1) Open a qualifying Becon account. </p>
+              <p>2) Complete and sign an Account Transfer Form.</p>
+              <p>We'll even transfer your positions over so you don't have to rebuild your portfolio. Switch now and get up to $100 back in account transfer fees charged by your current broker*.</p>
+              <p>
+                <font size="5px" style="font-weight:bold">Here's some reasons to choice Becon:</font>
+              </p>
+              <p>For more than three decades, Becon has been breaking ground providing investors and traders education, research and tools to help them develop strategies for reaching their financial goals.</p>
+              <p>As a result, Becon has experienced continued stability and steady growth, and our clients have been empowered to invest with confidence. </p>
+              <p>As a leading online brokerage firm, Becon offers a full line of investment products, online trading platforms and market research tools to help investors achieve their financial goals.</p>
+              <p>Since our founding in 1980, our commitment to helping investors trade with confidence and our dedication to providing exceptional value have meaningfully impacted the lives of our clients and associates. Through our commitment to
+                corporate social responsibility, community outreach and volunteerism, Becon also positively impacts the neighborhoods and communities around us.</p>
+              <p>We offer a wide array of tools, investment technologies and knowledge through our online trading services, free Becon mobile app and in-person assistance, including online chat and in-office, one-on-one services provided at more
+                than 500 branch locations.</p>
+              <p>
+                <font size="5px" style="font-weight:bold">Regular and Rigorous Review of Trade Execution Quality</font>
+              </p>
+              <p>When it comes to trade executions, Becon knows that a fraction of a second is all it takes for a stock price to fluctuate, potentially impacting a trade.</p>
+              <p>That's why we thoroughly review execution quality across pertinent time horizons, analyzing multiple factors. These factors are used when comparing performance in execution quality between market centers. Additionally, we regularly
+                compare our own execution quality metrics against an industry average. This regular and rigorous review of performance allows us to provide a consistent, quality execution experience. As a result, we are able to deliver highly
+                competitive executions and regularly execute trades at prices at or better than the National Best Bid and Offer (NBBO).</p>
+              <p>
+                <font size="5px" style="font-weight:bold">Read on for more information on Becon's Trade Quality.</font>
+              </p>
+              <li>Becon Best-Execution Index</li>
+              <li>Execution Price</li>
+              <li>Price Improvement </li>
+              <li>Trade Execution Speed </li>
+              <li>Order Routing</li>
+              <p>Becon monitors the execution quality of all the trading centers to assess whether the trading center is providing our customers best execution*. Becon uses various monitoring methods. These methods include a daily order-by-order
+                exception report analysis. They also include a post trade date regular and rigorous review of execution quality. We perform this regular and rigorous review by analyzing statistics from VistaOne Solutions, which is not affiliated
+                with Becon, and by reviewing the output of our patented algorithm, the Becon Best-Execution Index or SBI™.</p>
+              <p>
+                <font size="5px" style="font-weight:bold">I Will Guid You Step-By-Step to Trade The System</font>
+              </p>
+              <p>One of the greatest things about the the system is that there is absolutely no experienced required.</p>
+              <p>The system is easy for everyone to understand - and I go out my way to make sure that you understand every little detail. I want you to succeed.</p>
+              <p>Because of the low-risk, high-reward nature of Becon it is an a consistent and high profitable system.</p>
+              <p>You've seen in my trade screenshots that I posted earlier how simple the charts are that you will use to make profitable trades.</p>
+              <p>I will also show you how to use the charts to get into the market when it is likely to make reversal and big moves..</p>
+              <p>
+                <font size="5px" style="font-weight:bold; ">Learn about investment topics in the Becon Knowledge </font>
+              </p>
+
+
+
+
+
+
+
+
+
+
+            </td>
+
+
+
+
+
+
+
+            <td width="68">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>
+              <table width="733">
+                <tr>
+                  <td width="346" align="center"><img src="images/1111.png" /></td>
+                  <td width="375" align="center"><img src="images/2222.png" /></td>
+                </tr>
+                <tr>
+                  <td>
+
+                    <table width="344" border="0">
+                      <tr>
+                        <td width="31" height="186">&nbsp;</td>
+                        <td width="271">
+                          <p align="center">
+                            <font size="+1"><strong>Overview
+
+                                Positions</strong></font>
+                          </p>
+                          <p style="color:#666">
+                            <font>&nbsp;&nbsp;&nbsp;Add
+
+                              Power with Customizable Positions and the Quick Trade Bar View the
+
+                              Positions page of your account your way by selecting and ordering data to
+
+                              suit your trading style; then boost your trading power using the detachable
+
+                              Quick Trade Bar.
+                            </font>
+                          </p>
+
+
+                        </td>
+                        <td width="28">&nbsp;</td>
+                      </tr>
+                    </table>
+
+
+
+                  </td>
+                  <td>
+                    <table width="372" border="0">
+                      <tr>
+                        <td width="31" height="191">&nbsp;</td>
+                        <td width="304">
+                          <p align="center">
+                            <font size="+1"><strong>Portfolio Manager</strong></font>
+                          </p>
+                          <p style="color:#666">&nbsp;&nbsp;&nbsp;Powerful Tools for Portfolio Management Becon's Portfolio Review Tool, powered by Morningstar, is a professional-style tool that can assist you in selecting the right investment mix
+                            for your portfolio. Pre-defined asset allocation models let you compare current and targeted investments.</p>
+                        </td>
+                        <td width="23">&nbsp;</td>
+                      </tr>
+                    </table>
+
+
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center"><img src="images/3333.png" /></td>
+                  <td align="center"><img src="images/4444.png" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <table width="344" border="0">
+                      <tr>
+                        <td width="36" height="195">&nbsp;</td>
+                        <td width="263">
+                          <p align="center">
+                            <font size="+1"><strong>Trading Market-
+
+                                pulse</strong></font>
+                          </p>
+                          <p style="color:#666">&nbsp;&nbsp;&nbsp;trading-
+
+                            site_market-pulse
+                            Market Snapshots and Comparisons Provide Timely Information Market
+
+                            Pulse charts and maps provide at-a-glance trading volume and performance,
+
+                            while convenient Stockview and compare market
+
+                            data, enhancing your market research capabilities.
+                          </p>
+                        </td>
+                        <td width="31">&nbsp;</td>
+                      </tr>
+                    </table>
+
+
+
+                  </td>
+                  <td>
+                    <table width="371" border="0">
+                      <tr>
+                        <td width="33" height="218">&nbsp;</td>
+                        <td width="294">
+
+                          <p align="center">
+                            <font size="+1"><strong>Trading-
+
+                                site_performers</strong></font>
+                          </p>
+                          <p style="color:#666">&nbsp;&nbsp;&nbsp;trading-
+
+                            site_performers
+                            Convenient Investing Tools Enable a Birds-Eye View of the Market
+                            Becon's World Markets, Market Pulse and top performers data can help you
+
+                            get a broad view of the trading market which you may find useful for assessing trends or taking a big-
+
+                            picture approach to your investment opportunities.
+                          </p>
+
+
+                        </td>
+                        <td width="30">&nbsp;</td>
+                      </tr>
+                    </table>
+
+
+
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+
+
+      </td>
+    </tr>
+  </table>
+  </td>
+  </tr>
+  <tr>
+    <td background="images/footerbottom.jpg">
+      <table width="100" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="images/footer2.jpg" width="887" height="134" /></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+</body>
+
+</html>
