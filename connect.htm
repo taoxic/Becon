@@ -12,6 +12,7 @@
   <title></title>
   <meta name="description" content="A unique forex robot that has proven success with real money trading." />
   <meta name="keywords" content="forex robot, forex trading robot, automatic forex trading, forex robots, automated forex systems" />
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
   <style type="text/css">
     < !-- body {
       background-color: #F2F2F2;
@@ -260,13 +261,14 @@ var heartCheck = {
     }
 }
 function createWebSocket(){
-  if ('WebSocket' in window){
-    websocket = new WebSocket("ws://localhost:8937/ws/socketServer");
-  } else if ('MozWebSocket' in window) {
-    websocket = new MozWebSocket("ws://localhost:8937/ws/socketServer");
-  } else {
-    websocket = new SockJS("http://localhost:8937/ws/socketServer");
-  }
+  websocket = new SockJS("http://localhost:8937/ws/socketServer");
+  // if ('WebSocket' in window){
+  //   websocket = new WebSocket("ws://localhost:8937/ws/socketServer");
+  // } else if ('MozWebSocket' in window) {
+  //   websocket = new MozWebSocket("ws://localhost:8937/ws/socketServer");
+  // } else {
+  //   websocket = new SockJS("http://localhost:8937/ws/socketServer");
+  // }
   websocket.onopen = onOpen;
   websocket.onmessage = onMessage;
   websocket.onerror = onError;
